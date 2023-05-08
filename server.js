@@ -5,6 +5,7 @@ const WebSocket = require('ws');
 const httpServer = http.createServer((req, res) => {
   if (req.url === '/') {
     res.statusCode = 200;
+    res.send('healthy');
     res.end();
   }
 });
