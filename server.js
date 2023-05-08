@@ -16,8 +16,8 @@ httpServer.listen(8080, () => {
 // Create a WebSocket server that listens on the same port as the HTTP server
 const webSocketServer = new WebSocket.Server({ server: httpServer });
 
-webSocketServer.on('connection', (socket) => {
-  console.log('Client connected');
+webSocketServer.on('connection', (socket, request) => {
+  console.log(`New client connected with headers: ${JSON.stringify(request.headers)}`);
 
   socket.on('message', (data) => {
     console.log(`Received message: ${data}`);
