@@ -4,6 +4,7 @@ const WebSocket = require('ws');
 // Create an HTTP server that responds to a request to the root path
 const httpServer = http.createServer((req, res) => {
   if (req.url === '/') {
+    console.log(`New request with headers: ${JSON.stringify(req.headers)}`);
     res.statusCode = 200;
     res.send('healthy');
     res.end();
