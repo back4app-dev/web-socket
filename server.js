@@ -6,7 +6,7 @@ const httpServer = http.createServer((req, res) => {
   if (req.url === '/') {
     console.log(`New request with headers: ${JSON.stringify(req.headers)}`);
     res.statusCode = 200;
-    res.send('healthy');
+    res.write('healthy');
     res.end();
   }
 });
