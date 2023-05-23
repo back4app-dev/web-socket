@@ -8,7 +8,8 @@ RUN npm install --production
 
 COPY . .
 
-RUN SLEEP 600
+RUN apk --no-cache add coreutils
+RUN ash -c "sleep 600"
 
 EXPOSE 8080
 
