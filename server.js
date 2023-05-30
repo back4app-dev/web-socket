@@ -12,7 +12,8 @@ const httpServer = http.createServer((req, res) => {
 });
 
 httpServer.listen(8080, () => {
-  console.log('HTTP server listening on port 8080');
+  console.log('HTTP server listening on port 8080 1');
+  console.log('HTTP server listening on port 8080 2');
 });
 
 // Create a WebSocket server that listens on the same port as the HTTP server
@@ -29,6 +30,6 @@ webSocketServer.on('connection', (socket, request) => {
   });
 
   socket.on('close', () => {
-    console.log('Client disconnected');
+    console.log('Client disconnected1');
   });
 });
