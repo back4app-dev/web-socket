@@ -3,6 +3,7 @@ const WebSocket = require('ws');
 
 console.log('here 1');
 console.log('here 2');
+console.log('here 3');
 
 // Create an HTTP server that responds to a request to the root path
 const httpServer = http.createServer((req, res) => {
